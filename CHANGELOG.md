@@ -8,9 +8,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned
-- Manual "Check for Updates" menu item
+- Auto-focus text creation after annotation
+- Web version download bar for macOS app
 - Persistent tool settings (remember last-used colors, stroke width)
 - Performance optimization and bundle size reduction
+
+## [0.3.0] - 2025-07-30
+
+### Added
+- **🎯 Manual Update Check** - "Check for Updates..." menu item with user feedback
+- **⌨️ File Operation Shortcuts** - Native ⌘O (open) and ⌘S (export) menu integration
+- **📬 Modern Notification System** - Auto-dismissing status messages with proper timeout cleanup
+- **🔒 Enhanced Security** - IPC callback validation and process isolation hardening
+- **📊 Comprehensive Test Coverage** - Unit tests for notifications, IPC handlers, and auto-updater logic
+- **🛡️ Auto-updater Security** - Signature verification, integrity checks, and security logging
+
+### Changed
+- **⏰ Update Check Interval** - Extended from 6 to 12 hours for better user experience
+- **📦 Version Display** - Updated to v0.3.0 across all interfaces
+- **🔧 Electron Integration** - Improved main process error handling and logging
+
+### Fixed
+- **🔌 Memory Leaks** - Proper setTimeout cleanup in notification system
+- **🔗 IPC Communication** - Enhanced callback validation prevents runtime errors
+- **⚡ Performance** - Reduced background update checking frequency
+
+### Technical
+- Migration from pnpm to npm for better Electron compatibility
+- Enhanced TypeScript strictness and ESLint configuration
+- Improved error boundaries and graceful fallback handling
 
 ## [0.2.4] - 2025-07-30
 
@@ -115,7 +141,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Progressive Web App ready with modern browser feature detection
 - Optimized for professional workflows and high-resolution displays
 
-[Unreleased]: https://github.com/olekristianbe/boomsnap/compare/v0.2.4...HEAD
+[Unreleased]: https://github.com/olekristianbe/boomsnap/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/olekristianbe/boomsnap/releases/tag/v0.3.0
 [0.2.4]: https://github.com/olekristianbe/boomsnap/releases/tag/v0.2.4
 [0.2.3]: https://github.com/olekristianbe/boomsnap/releases/tag/v0.2.3
 [0.2.2]: https://github.com/olekristianbe/boomsnap-private/commits/main

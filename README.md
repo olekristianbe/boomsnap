@@ -1,22 +1,31 @@
 # BoomSnap
 
-**Professional screenshot annotation & compression tool** built with Next.js and Electron. BoomSnap helps you create beautiful, annotated screenshots with smart OCR capabilities and seamless compression.
-
-<img src="https://img.shields.io/badge/platform-macOS-lightgrey" alt="macOS"> <img src="https://img.shields.io/badge/arch-ARM64-blue" alt="ARM64"> <img src="https://img.shields.io/github/v/release/olekristianbe/boomsnap" alt="Version">
+🚀 **v0.3.0 Released** - Professional image annotation tool with enhanced Electron desktop app, modern notifications, and comprehensive security improvements. Built with Next.js 15 and distributed via Homebrew.
 
 ## ✨ Features
 
-- **Professional Annotation Tools** - Rectangle, arrow, and highlight tools with customizable properties
-- **Smart OCR Integration** - Copy text and create word-level highlights from images
-- **Export & Compression** - PNG/JPG export with TinyPNG integration and batch processing
-- **Modern UX** - Clean interface with dark/light themes and comprehensive keyboard shortcuts
-- **Professional Navigation** - Trackpad pan, smart zoom, and crop tool with aspect ratio presets
-- **Undo/Redo System** - Full history with crash-safe auto-save
-- **Auto-Updates** - Seamless background updates with user-friendly notifications
+- **🎯 Professional Annotation Tools**: Rectangle, arrow, highlight with customizable properties
+- **🔍 Smart OCR Integration**: Copy text and create word-level highlights with Tesseract.js
+- **📤 Export & Compression**: PNG/JPG export with quality control and batch processing
+- **🖥️ Native Desktop App**: Electron with native menus, shortcuts (⌘O, ⌘S), and auto-updater
+- **📬 Modern Notifications**: Auto-dismissing status messages with proper cleanup
+- **🎨 Professional Navigation**: Trackpad pan, smart zoom, crop tool with aspect ratios
+- **🔄 Undo/Redo System**: 100-action history with crash-safe IndexedDB auto-save
+- **🔒 Enhanced Security**: IPC validation, signature verification, and process isolation
 
-## 🍺 Installation (Homebrew)
+## 🛠 Tech Stack
 
-**Recommended installation method:**
+- **Framework**: Next.js 15 with App Router and TypeScript
+- **Desktop**: Electron 37 with auto-updater and native menus
+- **UI**: TailwindCSS + shadcn/ui components + modern design tokens
+- **State**: Zustand with persistent stores and IndexedDB session vault
+- **OCR**: Tesseract.js with Web Workers for client-side processing
+- **Testing**: Vitest with 24 comprehensive unit tests
+- **Package Manager**: npm (migrated from pnpm for Electron compatibility)
+
+## 🍺 Installation (Users)
+
+**Recommended for end users:**
 
 ```bash
 # Add the BoomSnap tap
@@ -26,61 +35,100 @@ brew tap olekristianbe/boomsnap
 brew install --cask boomsnap --no-quarantine
 ```
 
-**Update BoomSnap:**
+## 🚀 Development Setup
+
+**For developers working on BoomSnap:**
 
 ```bash
-brew upgrade boomsnap
+# Clone the private development repository
+git clone https://github.com/olekristianbe/boomsnap-private.git
+cd boomsnap-private
+npm install
+
+# Start development server
+npm run dev
+# Visit http://localhost:3000
+
+# Start Electron development mode
+npm run electron:dev
+
+# Build desktop app (creates DMG + ZIP)
+npm run electron:build
 ```
 
-## 🚀 Quick Start
+## 📋 Commands
 
-1. **Load Images** - Drag & drop, file picker, or paste from clipboard
-2. **Annotate** - Use keyboard shortcuts (V-select, R-rectangle, A-arrow, H-highlight)
-3. **OCR Copy** - Press C and drag to auto-copy text from images
-4. **Export** - Choose PNG/JPG with optional TinyPNG compression
-5. **Navigate** - Pan with trackpad, zoom with Cmd+scroll
+- `npm run dev` - Next.js development server
+- `npm run electron:dev` - Electron development mode
+- `npm run build` - Production build
+- `npm run electron:build` - Build desktop app (DMG + ZIP)
+- `npm run check` - Lint + TypeScript check (run before commits)
+- `npm run test:run` - Run all 24 unit tests
+- `npm run test:watch` - Watch mode for tests
 
-## ⌨️ Keyboard Shortcuts
+## ⚙️ Configuration
 
-- **V** - Select tool (Cmd+click for multi-select)
-- **R** - Rectangle annotation
-- **A** - Arrow annotation
-- **H** - Highlight tool
-- **C** - OCR copy tool
-- **X** - Crop tool with presets
-- **⌘Z** - Undo / **⇧⌘Z** - Redo
-- **⌘+scroll** - Zoom toward cursor
+**Auto-updates**: The desktop app automatically checks for updates every 12 hours. You can manually check via Help → "Check for Updates..."
 
-## 🔧 Tech Stack
+## 🎮 How to Use
 
-- **Framework:** Next.js 15 with TypeScript
-- **Desktop:** Electron 37 with auto-updater
-- **UI:** TailwindCSS + shadcn/ui
-- **OCR:** Tesseract.js with Web Workers
-- **Architecture:** ARM64 optimized for Apple Silicon
+### **Load Images**
+- Drag & drop images onto the canvas
+- Use "Browse Files" button or paste from clipboard
+- Switch between images in the sidebar
 
-## 🛡️ Security & Privacy
+### **Annotation Tools** (Keyboard Shortcuts)
+- **V** - Select tool (multi-select with Cmd+click)
+- **R** - Rectangle tool 
+- **A** - Arrow tool
+- **H** - Highlight tool  
+- **C** - OCR Copy (drag → auto-copy text)
+- **X** - Crop tool with aspect ratio presets
 
-- **Local Processing** - OCR and image processing happens entirely on your device
-- **No Data Collection** - Your images and annotations never leave your computer
-- **macOS Compatible** - Works seamlessly with macOS Sequoia and Tahoe
+### **Navigation**
+- **Pan**: Two-finger trackpad drag or mouse drag
+- **Zoom**: Cmd+scroll toward cursor or trackpad pinch
+- **Undo/Redo**: ⌘Z / ⇧⌘Z
 
-## 📋 System Requirements
+### **Export**
+- PNG/JPG export with quality control and custom filenames
+- Batch export for multiple images with progress tracking
+- Copy to clipboard support
+- Use ⌘S shortcut or File → Export menu
 
-- **macOS 12.0+** (Monterey or later)
-- **Apple Silicon** (M1, M2, M3 Macs)
-- **4GB RAM** recommended
-- **200MB** disk space
+## 🏗️ Repository Structure
 
-## 🔄 Auto-Updates
+**This is the private development repository.** For public distribution:
 
-BoomSnap automatically checks for updates and shows friendly notifications when new versions are available. Updates download in the background and install on your schedule.
+- **Private Development**: `olekristianbe/boomsnap-private` (this repo)
+- **Public Distribution**: `olekristianbe/boomsnap` (Homebrew tap, binaries only)
 
-## 📄 Links
+## 🚀 What's Next
 
-- **Issues & Support:** [Report Issues →](https://github.com/olekristianbe/boomsnap-private/issues)
-- **Changelog:** [View Releases →](https://github.com/olekristianbe/boomsnap/releases)
+**✅ v0.3.0: Enhanced Desktop Experience (COMPLETE)**
+- ✅ Manual update check with user feedback
+- ✅ File operation shortcuts (⌘O, ⌘S)
+- ✅ Modern notification system with auto-dismiss
+- ✅ Enhanced security with IPC validation
+- ✅ Comprehensive test coverage (24 unit tests)
 
----
+**v0.4.0: User Experience Polish (Next)**
+- Auto-focus text creation after annotation
+- Visual feedback improvements
+- Keyboard shortcuts help overlay
+- Persistent tool settings
 
-<sub>BoomSnap is developed by Lytic AS • Licensed for personal and commercial use</sub>
+**Future: Power User Features**
+- Multi-select property editing
+- Copy/paste annotations (⌘C/⌘V)
+- Background removal (WASM)
+- Annotation templates
+
+## 📄 Documentation
+
+- [CHANGELOG.md](CHANGELOG.md) - Release history
+- [NEXT-STEPS.md](NEXT-STEPS.md) - Development roadmap
+
+## 🎯 Status
+
+**Production Ready**: BoomSnap v0.3.0 is stable and ready for professional use. Complete annotation suite with desktop app, auto-updater, modern notifications, and comprehensive security improvements. All 24 unit tests passing.
