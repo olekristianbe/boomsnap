@@ -23,9 +23,7 @@
 - **Testing**: Vitest with 24 comprehensive unit tests
 - **Package Manager**: npm (migrated from pnpm for Electron compatibility)
 
-## 🍺 Installation (Users)
-
-**Recommended for end users:**
+## 🍺 Installation
 
 ```bash
 # Add the BoomSnap tap
@@ -34,37 +32,6 @@ brew tap olekristianbe/boomsnap
 # Install BoomSnap (bypasses macOS security warnings)
 brew install --cask boomsnap --no-quarantine
 ```
-
-## 🚀 Development Setup
-
-**For developers working on BoomSnap:**
-
-```bash
-# Clone the private development repository
-git clone https://github.com/olekristianbe/boomsnap-private.git
-cd boomsnap-private
-npm install
-
-# Start development server
-npm run dev
-# Visit http://localhost:3000
-
-# Start Electron development mode
-npm run electron:dev
-
-# Build desktop app (creates DMG + ZIP)
-npm run electron:build
-```
-
-## 📋 Commands
-
-- `npm run dev` - Next.js development server
-- `npm run electron:dev` - Electron development mode
-- `npm run build` - Production build
-- `npm run electron:build` - Build desktop app (DMG + ZIP)
-- `npm run check` - Lint + TypeScript check (run before commits)
-- `npm run test:run` - Run all 24 unit tests
-- `npm run test:watch` - Watch mode for tests
 
 ## ⚙️ Configuration
 
@@ -98,10 +65,7 @@ npm run electron:build
 
 ## 🏗️ Repository Structure
 
-**This is the private development repository.** For public distribution:
-
-- **Private Development**: `olekristianbe/boomsnap-private` (this repo)
-- **Public Distribution**: `olekristianbe/boomsnap` (Homebrew tap, binaries only)
+**This is the public distribution repository** for BoomSnap, containing the Homebrew tap and release binaries.
 
 ## 🚀 What's Next
 
@@ -126,8 +90,7 @@ npm run electron:build
 
 ## 📄 Documentation
 
-- [CHANGELOG.md](CHANGELOG.md) - Release history
-- [NEXT-STEPS.md](NEXT-STEPS.md) - Development roadmap
+- [CHANGELOG.md](CHANGELOG.md) - Release history and version details
 
 ## 🎯 Status
 
