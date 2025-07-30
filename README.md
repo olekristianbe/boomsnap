@@ -7,7 +7,7 @@
 ## ✨ Features
 
 - **Professional Annotation Tools** - Rectangle, arrow, and highlight tools with customizable properties
-- **Smart OCR Integration** - Copy text and create word-level highlights from images  
+- **Smart OCR Integration** - Copy text and create word-level highlights from images
 - **Export & Compression** - PNG/JPG export with TinyPNG integration and batch processing
 - **Modern UX** - Clean interface with dark/light themes and comprehensive keyboard shortcuts
 - **Professional Navigation** - Trackpad pan, smart zoom, and crop tool with aspect ratio presets
@@ -27,6 +27,7 @@ brew install --cask boomsnap --no-quarantine
 ```
 
 **Update BoomSnap:**
+
 ```bash
 brew upgrade boomsnap
 ```
@@ -43,7 +44,7 @@ brew upgrade boomsnap
 
 - **V** - Select tool (Cmd+click for multi-select)
 - **R** - Rectangle annotation
-- **A** - Arrow annotation  
+- **A** - Arrow annotation
 - **H** - Highlight tool
 - **C** - OCR copy tool
 - **X** - Crop tool with presets
@@ -82,4 +83,4 @@ BoomSnap automatically checks for updates and shows friendly notifications when 
 
 ---
 
-<sub>BoomSnap is developed by Ole Kristian B. Eikenæs • Licensed for personal and commercial use</sub>
+<sub>BoomSnap is developed by Lytic AS • Licensed for personal and commercial use</sub>
