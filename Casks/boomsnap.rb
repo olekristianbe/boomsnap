@@ -1,5 +1,5 @@
 cask "boomsnap" do
-  version "0.2.3"
+  version "0.2.4"
   sha256 :no_check # auto-filled by CI
 
   url "https://github.com/olekristianbe/boomsnap/releases/download/v#{version}/BoomSnap-#{version}-arm64-mac.zip",
