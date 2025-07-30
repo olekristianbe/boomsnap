@@ -13,6 +13,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Persistent tool settings (remember last-used colors, stroke width)
 - Performance optimization and bundle size reduction
 
+## [0.3.2] - 2025-07-30
+
+### Added
+- **Manual restart controls** - "Restart Now" and "Later" buttons for update installation
+- **Improved notification positioning** - Moved to bottom-left corner for better UX
+- **Enhanced notification persistence** - All notifications visible for 10 seconds
+
+### Changed
+- **User-controlled updates** - Removed automatic restart, user chooses when to update
+- **Better notification UX** - Purple styling for update-downloaded with action buttons
+- **Longer visibility** - Extended notification timeouts from 3s to 10s for all types
+
+### Fixed
+- **Manual update control** - No more forced restarts, user has full control
+- **Notification positioning** - Better placement that doesn't interfere with work
+- **Update experience** - Cleaner flow without system notifications
+
+### Technical
+- Enhanced IPC handlers for manual restart functionality
+- Improved auto-updater event handling with user choice
+- Better timeout management for different notification types
+
 ## [0.3.1] - 2025-07-30
 
 ### Added
@@ -158,7 +180,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Progressive Web App ready with modern browser feature detection
 - Optimized for professional workflows and high-resolution displays
 
-[Unreleased]: https://github.com/olekristianbe/boomsnap/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/olekristianbe/boomsnap/compare/v0.3.2...HEAD
+[0.3.2]: https://github.com/olekristianbe/boomsnap/releases/tag/v0.3.2
 [0.3.1]: https://github.com/olekristianbe/boomsnap/releases/tag/v0.3.1
 [0.3.0]: https://github.com/olekristianbe/boomsnap/releases/tag/v0.3.0
 [0.2.4]: https://github.com/olekristianbe/boomsnap/releases/tag/v0.2.4
