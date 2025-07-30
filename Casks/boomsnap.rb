@@ -1,6 +1,6 @@
 cask "boomsnap" do
-  version "0.3.0"
-  sha256 "252e3852a4f936e4fc32799cf3c83cc7bf4f2c505c48b922b4586424994922b7"
+  version "0.3.1"
+  sha256 "b0d07aba8777a523fa92e44bbd70ee7e0997b78ff4f738d0350924b87451f5a1"
 
   url "https://github.com/olekristianbe/boomsnap/releases/download/v#{version}/BoomSnap-#{version}-arm64-mac.zip",
       verified: "github.com/olekristianbe/boomsnap/"

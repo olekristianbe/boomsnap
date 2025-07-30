@@ -1,6 +1,6 @@
 # BoomSnap
 
-🚀 **v0.3.0 Released** - Professional image annotation tool with enhanced Electron desktop app, modern notifications, and comprehensive security improvements. Built with Next.js 15 and distributed via Homebrew.
+🚀 **v0.3.1 Released** - Professional image annotation tool with enhanced Electron desktop app, modern notifications, and comprehensive security improvements. Built with Next.js 15 and distributed via Homebrew.
 
 ## ✨ Features
 
@@ -94,4 +94,4 @@ brew install --cask boomsnap --no-quarantine
 
 ## 🎯 Status
 
-**Production Ready**: BoomSnap v0.3.0 is stable and ready for professional use. Complete annotation suite with desktop app, auto-updater, modern notifications, and comprehensive security improvements. All 24 unit tests passing.
+**Production Ready**: BoomSnap v0.3.1 is stable and ready for professional use. Complete annotation suite with desktop app, auto-updater, centered notifications, and comprehensive security improvements. All 24 unit tests passing.

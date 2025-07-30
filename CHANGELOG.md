@@ -13,6 +13,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Persistent tool settings (remember last-used colors, stroke width)
 - Performance optimization and bundle size reduction
 
+## [0.3.1] - 2025-07-30
+
+### Added
+- **Dynamic version display** - Version number automatically syncs with package.json
+
+### Changed
+- **Centered notifications** - Update status messages now appear at top-center instead of bottom-left
+- **Enhanced notification animations** - Smoother slide-in animations from top
+
+### Fixed
+- **Notification positioning** - Better visual alignment and user experience
+- **Automatic version management** - Eliminates manual version updates in UI code
+
+### Technical
+- Import version dynamically from package.json
+- Improved notification UX with proper centering and animations
+
 ## [0.3.0] - 2025-07-30
 
 ### Added
@@ -141,7 +158,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Progressive Web App ready with modern browser feature detection
 - Optimized for professional workflows and high-resolution displays
 
-[Unreleased]: https://github.com/olekristianbe/boomsnap/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/olekristianbe/boomsnap/compare/v0.3.1...HEAD
+[0.3.1]: https://github.com/olekristianbe/boomsnap/releases/tag/v0.3.1
 [0.3.0]: https://github.com/olekristianbe/boomsnap/releases/tag/v0.3.0
 [0.2.4]: https://github.com/olekristianbe/boomsnap/releases/tag/v0.2.4
 [0.2.3]: https://github.com/olekristianbe/boomsnap/releases/tag/v0.2.3
